@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.body.onload = addElement;
+    var my_table = newTable = null;
+    var my_tbody = newTbody  = null;
+
+
+    function addElement() {
+
+        // Создаём новый элемент div
+        // и добавляем в него немного контента
+
+        let newTable = document.createElement("table");
+        let newTbody = document.createElement("tbody");
+        newTbody.innerHTML ="<h>1</h>"
+
+
+
+
+
+
+
+
+
+
+        // Добавляем только что созданный элемент в дерево DOM
+
+        my_table = document.getElementById("table");
+
+        document.body.insertBefore(newTable, my_table);}
+</script>
+
+</body>
+</html>

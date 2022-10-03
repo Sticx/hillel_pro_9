@@ -7,4 +7,4 @@
 //
 // })
 
-const changeColor = e => e.style.color ? e.style.color = '' : e.style.color = 'orange';
+const changeColor = f => f.style.color ? f.style.color = '' : f.style.color = 'orange';
