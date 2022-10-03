@@ -15,20 +15,24 @@
 <div id="elem"></div>
 
 <script>
-  var elem =document.querySelector('#elem');
+  let elem =document.querySelector('#elem');
 
   createTable(elem, 10, 10);
   
   function createTable(parent,columns,rows) {
-    var table = document.createElement('table');
+    let num = 1;
+    let table = document.createElement('table');
 
-    for (var i=0; i< rows; i++){
-      var tr = document.createElement('tr');
+    for (let i=0; i< rows; i++){
+      let tr = document.createElement('tr');
 
-      for (var j=0; j<columns; j++){
-        var td = document.createElement('td');
+      for (let j=0; j<columns; j++){
+        let td = document.createElement('td');
+        td.innerHTML = num++;
+
         tr.appendChild(td);
       }
+
       table.appendChild(tr);
 
     }
