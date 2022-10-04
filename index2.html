@@ -5,36 +5,40 @@
     <title>Title</title>
 </head>
 <body>
+<style>
+  table td{
+    padding: 20px;
+    border: 2px solid black;
+  }
+</style>
+
+<div id="elem"></div>
+
 <script>
-    document.body.onload = addElement;
-    var my_table = newTable = null;
-    var my_tbody = newTbody  = null;
+  let elem =document.querySelector('#elem');
 
+  createTable(elem, 10, 10);
+  
+  function createTable(parent,columns,rows) {
+    let num = 1;
+    let table = document.createElement('table');
 
-    function addElement() {
+    for (let i=0; i< rows; i++){
+      let tr = document.createElement('tr');
 
-        // Создаём новый элемент div
-        // и добавляем в него немного контента
+      for (let j=0; j<columns; j++){
+        let td = document.createElement('td');
+        td.innerHTML = num++;
 
-        let newTable = document.createElement("table");
-        let newTbody = document.createElement("tbody");
-        newTbody.innerHTML ="<h>1</h>"
+        tr.appendChild(td);
+      }
 
+      table.appendChild(tr);
 
+    }
+    parent.appendChild(table);
+  }
 
-
-
-
-
-
-
-
-        // Добавляем только что созданный элемент в дерево DOM
-
-        my_table = document.getElementById("table");
-
-        document.body.insertBefore(newTable, my_table);}
 </script>
-
 </body>
 </html>
